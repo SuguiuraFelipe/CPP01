@@ -6,11 +6,10 @@
 /*   By: fsuguiur <fsuguiur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 17:14:45 by fsuguiur          #+#    #+#             */
-/*   Updated: 2026/04/20 17:51:26 by fsuguiur         ###   ########.fr       */
+/*   Updated: 2026/04/20 17:56:46 by fsuguiur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "HumanB.hpp"
 
 HumanB::HumanB(std::string startname) : weapon(0), name(startname)
