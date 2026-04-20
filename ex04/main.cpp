@@ -6,7 +6,7 @@
 /*   By: fsuguiur <fsuguiur@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/21 15:42:09 by fsuguiur          #+#    #+#             */
-/*   Updated: 2026/01/21 16:18:31 by fsuguiur         ###   ########.fr       */
+/*   Updated: 2026/04/20 18:00:41 by fsuguiur         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 #include <iostream>
 #include <string>
 
-std::string replaceLine(std::string line, const std::string& s1, const std::string& s2) {
-    size_t pos;
-    while ((pos = line.find(s1)) != std::string::npos) {
+std::string replaceLine(std::string line, const std::string& s1, const std::string& s2)
+{
+    size_t pos = 0;
+    while ((pos = line.find(s1, pos)) != std::string::npos)
+    {
         line.erase(pos, s1.length());
         line.insert(pos, s2);
+        pos += s2.length();
     }
     return line;
 }
